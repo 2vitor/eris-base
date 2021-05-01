@@ -11,7 +11,6 @@ class Message {
         if (!prefix) return;
         const cmd = this.client.commands.find(command => command.help.name === ctx.messageCommand ||
             command.config.aliases.includes(ctx.messageCommand))
-        console.log(cmd.help.name);
         if (cmd) cmd.command(ctx);
     };
 }
